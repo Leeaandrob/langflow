@@ -44,16 +44,6 @@ export default function SettingsPage(): JSX.Element {
       ),
     },
     {
-      title: "Langflow API",
-      href: "/settings/api-keys",
-      icon: (
-        <ForwardedIconComponent
-          name="Key"
-          className="w-4 flex-shrink-0 justify-start stroke-[1.5]"
-        />
-      ),
-    },
-    {
       title: "Shortcuts",
       href: "/settings/shortcuts",
       icon: (
@@ -77,7 +67,7 @@ export default function SettingsPage(): JSX.Element {
   return (
     <PageLayout
       title="Settings"
-      description="Manage the general settings for Langflow."
+      description="Manage the general settings for Tela AI Studio."
     >
       <div className="flex h-full w-full space-y-8 lg:flex-row lg:space-x-8 lg:space-y-0">
         <aside className="flex h-full shrink-0 flex-col space-y-6 lg:w-[20vw]">
