@@ -10,6 +10,9 @@ from .OllamaModel import ChatOllamaComponent
 from .OpenAIModel import OpenAIModelComponent
 from .VertexAiModel import ChatVertexAIComponent
 from .PerplexityModel import PerplexityComponent
+from .TelaTextGeneration import TelaTextModelComponent
+from .TelaImageGeneration import TelaImageModelComponent
+from .TelaAvatarGeneration import TelaAvatarModelComponent
 
 __all__ = [
     "AIMLModelComponent",
@@ -24,5 +27,8 @@ __all__ = [
     "OpenAIModelComponent",
     "ChatVertexAIComponent",
     "PerplexityComponent",
+    "TelaTextModelComponent",
+    "TelaImageModelComponent",
+    "TelaAvatarModelComponent",
     "base",
 ]
