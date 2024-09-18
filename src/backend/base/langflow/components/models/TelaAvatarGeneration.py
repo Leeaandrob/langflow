@@ -1,3 +1,5 @@
+import os
+
 import requests
 
 from langflow.custom import Component
@@ -47,8 +49,9 @@ class TelaAvatarModelComponent(Component):
             "ref_info": "pose",
             "exp_weight": 1,
         }
+        path = os.path.dirname(os.path.abspath(__file__))
         files = {
-            "source_image": ("sam.png", open("/tmp/sam.png", "rb"), "image/png"),
+            "source_image": ("sam.png", open(f"{path}/sam.png", "rb"), "image/png"),
         }
 
         response = requests.post(url, data=data, files=files)
