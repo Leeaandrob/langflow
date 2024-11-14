@@ -75,6 +75,9 @@ build_frontend: ## build the frontend static files
 	@rm -rf src/backend/base/langflow/frontend
 	@cp -r src/frontend/build src/backend/base/langflow/frontend
 
+run:
+	@python -m langflow run --debug
+
 init: check_tools clean_python_cache clean_npm_cache ## initialize the project
 	@make install_backend
 	@make install_frontend

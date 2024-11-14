@@ -165,12 +165,12 @@ export default function FlowPage({ view }: { view?: boolean }): JSX.Element {
         {ENABLE_BRANDING && version && (
           <a
             target={"_blank"}
-            href="https://medium.com/logspace/langflow-datastax-better-together-1b7462cebc4d"
+            href="https://fanhero.com"
             className="langflow-page-icon"
           >
-            <div className="mt-1">Langflow 🤝 DataStax</div>
+            <div className="mt-1">Tela 🤝 FanHero</div>
 
-            <div className={version ? "mt-2" : "mt-1"}>⛓️ v{version}</div>
+            <div className={version ? "mt-2" : "mt-1"}>{version}</div>
           </a>
         )}
       </div>

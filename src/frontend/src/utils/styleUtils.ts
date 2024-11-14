@@ -219,6 +219,7 @@ import { Share2Icon } from "../icons/Share2";
 import SvgSlackIcon from "../icons/Slack/SlackIcon";
 import { SpiderIcon } from "../icons/Spider";
 import { Streamlit } from "../icons/Streamlit";
+import { TelaIcon } from "../icons/Tela";
 import { UpstashSvgIcon } from "../icons/Upstash";
 import { VectaraIcon } from "../icons/VectaraIcon";
 import { VertexAIIcon } from "../icons/VertexAI";
@@ -430,6 +431,7 @@ export const nodeIconsLucide: iconsType = {
   SpiderTool: SpiderIcon,
   SupabaseVectorStore: SupabaseIcon,
   Supabase: SupabaseIcon,
+  Tela: TelaIcon,
   VertexAI: VertexAIIcon,
   ChatVertexAI: VertexAIIcon,
   VertexAIEmbeddings: VertexAIIcon,

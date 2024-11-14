@@ -21,6 +21,17 @@ const SwitchOutputView: React.FC<SwitchOutputViewProps> = ({
   outputName,
   type,
 }) => {
+  function isBase64Image(str: string): boolean {
+    const regex =
+      /^data:image\/(?:png|jpg|jpeg|gif);base64,[a-zA-Z0-9+/]+={0,2}$/;
+    return regex.test(str);
+  }
+
+  function isVideoUrl(url: string): boolean {
+    const regex = /^https?:\/\/.+\.(mp4)$/;
+    return regex.test(url);
+  }
+
   const flowPool = useFlowStore((state) => state.flowPool);
   const flowPoolNode = (flowPool[nodeId] ?? [])[
     (flowPool[nodeId]?.length ?? 1) - 1
@@ -46,7 +57,32 @@ const SwitchOutputView: React.FC<SwitchOutputViewProps> = ({
         ></ErrorOutput>
       </Case>
 
-      <Case condition={resultType === "text"}>
+      <Case condition={isBase64Image(resultMessage)}>
+        <div className="mx-auto h-auto w-full max-w-sm">
+          <img
+            src={resultMessage}
+            alt="Embedded Base64"
+            className="h-auto w-full max-w-full object-contain"
+          />
+        </div>
+      </Case>
+
+      <Case condition={isVideoUrl(resultMessage)}>
+        <div className="mx-auto h-auto w-full max-w-sm">
+          <video controls className="h-auto w-full max-w-full object-contain">
+            <source src={resultMessage} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </Case>
+
+      <Case
+        condition={
+          resultType === "text" &&
+          !isBase64Image(resultMessage) &&
+          !isVideoUrl(resultMessage)
+        }
+      >
         <TextOutputView left={false} value={resultMessage} />
       </Case>
 

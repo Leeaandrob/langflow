@@ -330,8 +330,8 @@ def print_banner(host: str, port: int):
     styled_notices = [f"[bold]{notice}[/bold]" for notice in notices if notice]
     styled_package_name = stylize_text(package_name, package_name, any("pre-release" in notice for notice in notices))
 
-    title = f"[bold]Welcome to :chains: {styled_package_name}[/bold]\n"
-    info_text = "Collaborate, and contribute at our [bold][link=https://github.com/langflow-ai/langflow]GitHub Repo[/link][/bold] :star2:"
+    title = "[bold]Welcome to Tela AI Studio[/bold]\n"
+    info_text = ""
     telemetry_text = "We collect anonymous usage data to improve Langflow.\nYou can opt-out by setting [bold]DO_NOT_TRACK=true[/bold] in your environment."
     access_link = f"Access [link=http://{host}:{port}]http://{host}:{port}[/link]"
 
