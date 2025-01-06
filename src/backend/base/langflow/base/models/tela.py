@@ -6,7 +6,12 @@
 
 
 TELA_MODEL_NAMES = [
-    "128k-instruct",
+    "phi3.5:3.8b-mini-instruct-fp16",
+    "mistral-small:22b-instruct-2409-fp16",
+    "qwq:32b-preview-fp16",
+    "nemotron:70b-instruct-q8_0",
+    "llama3.3:70b-instruct-q8_0",
+    "marco-o1:7b-fp16",
 ]
 # Backwards compatibility
 MODEL_NAMES = TELA_MODEL_NAMES
